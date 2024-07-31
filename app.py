@@ -4,6 +4,7 @@ import joblib
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
+from fastapi.responses import FileResponse
 
 # Loading of the trained model
 loaded_model = joblib.load('model_rf.pkl')
@@ -71,10 +72,25 @@ def evaluate():
     predicted_prices = np.exp(y_pred)
 
     # Creating a list of dictionaries with original and predicted prices
-    results = [{"original_price": round(orig,1), "predicted_price": round(pred,1)} for orig, pred in
+    results = [{"Real Price": round(orig,1), "Predicted Price": round(pred,1)} for orig, pred in
                zip(original_prices, predicted_prices)]
 
     return {"results": results}
+
+
+@app.get("/download_test_data")
+def download_test_data():
+    # Reading the cleaned data and splitting into train and test sets
+    df_pd = pd.read_csv("cleaned_data.csv")
+    features = df_pd.drop(['Price'], axis=1)
+    X_train, X_test, y_train, y_test = train_test_split(features, np.log(df_pd['Price']), test_size=0.2, random_state=0)
+
+    # Saving X_test to a CSV file
+    test_data_filename = "X_test.csv"
+    X_test.to_csv(test_data_filename, index=False)
+
+    # Returning the file as a response
+    return FileResponse(path=test_data_filename, filename=test_data_filename, media_type='text/csv')
 
 
 if __name__ == "__main__":

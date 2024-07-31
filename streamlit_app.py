@@ -1,7 +1,15 @@
 import streamlit as st
 import requests
+from PIL import Image
 
-st.title("Real Estate Price Predictor (Belgium)")
+# Load images
+header_image = Image.open("03IHH-Belgium-slide-O715-articleLarge.jpg.webp")  # Replace with your own image path
+predict_image = Image.open("360_F_332243559_TxD3apokkJJqdtXBmLIwvyXTL8hb1xQL.jpg")
+
+
+st.title("Real Estate Price Predictor (Belgium) ")
+
+st.image(header_image, use_column_width=True)
 
 # Inputs for prediction
 st.header("Input your values here:")
@@ -70,13 +78,14 @@ if st.button("Predict Price"):
     response = requests.post("http://127.0.0.1:8000/predict", json=input_features)
     if response.status_code == 200:
         result = response.json()
-        st.success(f"The predicted price is: ${result['predicted_price']:.2f}")
+        st.success(f"Based on the information you have provided, the price will be: {result['predicted_price']:.2f} euros")
+        st.image(predict_image, use_column_width=True)
     else:
         st.error("An error occurred while making the prediction.")
 
 # Evaluation of the model based on 9715 properties
 
-st.header("Evaluate the Predictor (9715 properties):")
+st.header("Evaluate the Predictor based on Test Data (9715 properties):")
 if st.button("Evaluate"):
     # Sending the request to the FastAPI evaluate endpoint (connection to FastAPI back-end)
     response = requests.get("http://127.0.0.1:8000/evaluate")
@@ -85,3 +94,25 @@ if st.button("Evaluate"):
         st.write(results)
     else:
         st.error("An error occurred while evaluating the model.")
+
+
+url = "http://127.0.0.1:8000/download_test_data"
+
+st.title("Download Test Data")
+
+st.write("Click the button below to download the test data as a CSV file.")
+
+# Fetch the data from the FastAPI endpoint
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Create a download button in Streamlit
+    st.download_button(
+        label="Download X_test.csv",
+        data=response.content,
+        file_name="X_test.csv",
+        mime="text/csv"
+    )
+else:
+    st.write("Failed to fetch the test data. Please try again later.")
