@@ -3,7 +3,7 @@ import requests
 
 st.title("Real Estate Price Predictor (Belgium)")
 
-# Form to input features for prediction
+# Inputs for prediction
 st.header("Input your values here:")
 District = st.text_input("District", "Brugge")
 ConstructionYear = st.number_input("Construction Year", 2026)
@@ -66,7 +66,7 @@ if st.button("Predict Price"):
         "TypeOfProperty": TypeOfProperty
     }
 
-    # Send the request to the FastAPI prediction endpoint
+    # Sending the request to the FastAPI prediction endpoint (connection to FastAPI back-end)
     response = requests.post("http://127.0.0.1:8000/predict", json=input_features)
     if response.status_code == 200:
         result = response.json()
@@ -74,10 +74,11 @@ if st.button("Predict Price"):
     else:
         st.error("An error occurred while making the prediction.")
 
-# Section to evaluate the model
+# Evaluation of the model based on 9715 properties
+
 st.header("Evaluate the Predictor (9715 properties):")
 if st.button("Evaluate"):
-    # Send the request to the FastAPI evaluate endpoint
+    # Sending the request to the FastAPI evaluate endpoint (connection to FastAPI back-end)
     response = requests.get("http://127.0.0.1:8000/evaluate")
     if response.status_code == 200:
         results = response.json()["results"]
