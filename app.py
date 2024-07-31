@@ -56,7 +56,7 @@ def predict(features: Features):
 
 
 # This method helps you understand how well the model is performing,
-# by comparing the actual prices to the predicted prices on the test set.
+# by comparing the actual prices to the predicted prices on cleaned_data.csv (cleaned dataset).
 
 @app.get("/evaluate")
 def evaluate():
