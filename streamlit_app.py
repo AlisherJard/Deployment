@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 
 # Load images
-header_image = Image.open("03IHH-Belgium-slide-O715-articleLarge.jpg.webp")  # Replace with your own image path
+header_image = Image.open("ezgif-3-63d9b88cbf.jpg")  # Replace with your own image path
 predict_image = Image.open("360_F_332243559_TxD3apokkJJqdtXBmLIwvyXTL8hb1xQL.jpg")
 
 
