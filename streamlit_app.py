@@ -31,7 +31,7 @@ SurfaceOfPlot = st.number_input("Surface Of Plot", 200.0)
 SwimmingPool = st.number_input("Swimming Pool", 0)
 Terrace = st.number_input("Terrace", 1)
 ToiletCount = st.number_input("Toilet Count", 2)
-TypeOfProperty = st.text_input("Type Of Property:", 1)
+TypeOfProperty = st.selectbox("Type Of Property", [1, 2])
 
 # Button to submit the form
 if st.button("Predict Price"):
