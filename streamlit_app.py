@@ -75,7 +75,7 @@ if st.button("Predict Price"):
     }
 
     # Sending the request to the FastAPI prediction endpoint (connection to FastAPI back-end)
-    response = requests.post("http://127.0.0.1:8000/predict", json=input_features)
+    response = requests.post("https://deployment-nlge.onrender.com/predict", json=input_features)
     if response.status_code == 200:
         result = response.json()
         st.success(f"Based on the information you have provided, the price will be: {result['predicted_price']:.2f} euros")
@@ -88,7 +88,7 @@ if st.button("Predict Price"):
 st.header("Evaluate the Predictor based on Test Data (9715 properties):")
 if st.button("Evaluate"):
     # Sending the request to the FastAPI evaluate endpoint (connection to FastAPI back-end)
-    response = requests.get("http://127.0.0.1:8000/evaluate")
+    response = requests.get("https://deployment-nlge.onrender.com/evaluate")
     if response.status_code == 200:
         results = response.json()["results"]
         st.write(results)
@@ -96,7 +96,7 @@ if st.button("Evaluate"):
         st.error("An error occurred while evaluating the model.")
 
 
-url = "http://127.0.0.1:8000/download_test_data"
+url = "https://deployment-nlge.onrender.com/download_test_data"
 
 st.title("Download Test Data")
 
