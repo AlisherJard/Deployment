@@ -23,5 +23,5 @@ y_pred = loaded_model.predict(X_test)
 score = loaded_model.score(X_test, y_test)
 mae = mean_absolute_error(np.exp(y_test), np.exp(y_pred))
 
-print(f"R2: {score} %")
-print(f"MAE: {mae}")
+print(f"R2: {round(score,2)} %")
+print(f"MAE: {round(mae,1)}")
