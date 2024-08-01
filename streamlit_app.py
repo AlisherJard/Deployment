@@ -66,7 +66,7 @@ LivingArea = st.number_input("Living Area", min_value=12.0, max_value=1000.0)
 
 NumberOfFacades = st.selectbox("Number Of Facades", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
 
-PostalCode = st.selectbox("Postal Code", [float(code) for code in range(0000, 9999)])
+PostalCode = st.selectbox("Postal Code", [int(code) for code in range(0000, 9999)])
 
 RoomCount = st.selectbox("Room Count", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0])
 
