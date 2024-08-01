@@ -64,7 +64,7 @@ Garden = st.selectbox("Garden", [0.0, 1.0])
 
 GardenArea = st.number_input("Garden Area", min_value=0, max_value=92828)
 
-LivingArea = st.number_input("Living Area", min_value=12, max_value=1000)
+LivingArea = st.number_input("Living Area (m²)", min_value=12, max_value=1000)
 
 NumberOfFacades = st.selectbox("Number Of Facades", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
 
