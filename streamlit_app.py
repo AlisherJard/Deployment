@@ -22,7 +22,7 @@ District = st.selectbox("District", ['Halle-Vilvoorde', 'Dinant', 'Huy', 'Aalst'
                                       'Soignies', 'Mechelen', 'Brussels', 'Diksmuide', 'Veurne', 'Verviers', 'Antwerp',
                                       'Tongeren',  'Dendermonde', 'Arlon', 'Neufchâteau', 'Ieper', 'Kortrijk', 'Oudenaarde', 'Roeselare'])
 
-ConstructionYear = st.selectbox("Construction Year", [float(year) for year in range(1900, 2034)])
+ConstructionYear = st.selectbox("Construction Year", [int(year) for year in range(1900, 2034)])
 
 FloodingZone = st.selectbox("Flooding Zone", ['False', 'POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', 'RECOGNIZED_FLOOD_ZONE', 'RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE',
                                                  'CIRCUMSCRIBED_WATERSIDE_ZONE', 'POSSIBLE_FLOOD_ZONE', 'NON_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE',
