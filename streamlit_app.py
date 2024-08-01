@@ -19,9 +19,9 @@ District = st.selectbox("District", ['Halle-Vilvoorde', 'Dinant', 'Huy', 'Aalst'
                                       'Maaseik', 'Namur', 'Leuven', 'Turnhout', 'Charleroi', 'Marche-en-Famenne', 'Thuin',
                                       'Soignies', 'Mechelen', 'Brussels', 'Diksmuide', 'Veurne', 'Verviers', 'Antwerp',
                                       'Tongeren',  'Dendermonde', 'Arlon', 'Neufchâteau', 'Ieper', 'Kortrijk', 'Oudenaarde', 'Roeselare'])
-ConstructionYear = st.selectbox("Construction Year", [1900, 1901.0, 1902.0, 1903.0, 1904.0, 1905.0, 1906.0, 1907.0,
-                                                         1908.0, 1909.0, 1910.0, 1911.0, 1912.0, 1913.0, 1914.0, 1915.0,
-                                                         1916.0, 1917.0, 1918.0, 1919.0, 1920.0, 1921.0, 1922.0, 1923.0,
+ConstructionYear = st.selectbox("Construction Year", [1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907,
+                                                         1908, 1909, 1910, 1911, 1912, 1913, 1914, 1915,
+                                                         1916, 1917, 1918, 1919, 1920, 1921., 1922.0, 1923.0,
                                                          1924.0, 1925.0, 1926.0, 1927.0, 1928.0, 1929.0, 1930.0, 1931.0,
                                                          1932.0, 1933.0, 1934.0, 1935.0, 1936.0, 1937.0, 1938.0, 1939.0,
                                                          1940.0, 1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0,
