@@ -37,8 +37,8 @@ ConstructionYear = st.selectbox("Construction Year", [1900.0, 1901.0, 1902.0, 19
                                                          2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0,
                                                          2020.0, 2021.0, 2022.0, 2023.0, 2024.0, 2025.0, 2026.0, 2027.0,
                                                          2033.0])
-FloodingZone = st.number_input("Flooding Zone", 1)
-Kitchen = st.number_input("Kitchen", 1)
+FloodingZone = st.number_input("Flooding Zone", "Some Locality")
+Kitchen = st.number_input("Kitchen", "Some Locality")
 Locality = st.text_input("Locality", "Some Locality")
 PEB = st.text_input("PEB", "A")
 Province = st.text_input("Province", "Some Province")
@@ -59,7 +59,7 @@ RoomCount = st.number_input("Room Count", 6)
 ShowerCount = st.number_input("Shower Count", 2)
 SurfaceOfPlot = st.number_input("Surface Of Plot", 200.0)
 SwimmingPool = st.number_input("Swimming Pool", 0)
-Terrace = st.number_input("Terrace", 1)
+Terrace = st.number_input("Terrace", 1.0)
 ToiletCount = st.number_input("Toilet Count", min_value=0, max_value=6)
 TypeOfProperty = st.selectbox("Type Of Property (1 = House),(2 = Apartment)", [1, 2])
 
