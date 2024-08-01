@@ -72,9 +72,7 @@ BedroomCount = st.number_input("Bedroom Count", min_value=0, max_value=8)
 
 
 # The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and
-# tested on the remaining 20%. A value of 0.0 in the “Furnished” and “Fireplace” columns indicates that the house
-# or apartment does not have these features..
-
+# tested on the remaining 20%.
 
 Garden = st.number_input("Garden", 1)
 
