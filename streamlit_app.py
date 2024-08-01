@@ -13,6 +13,7 @@ st.image(header_image, use_column_width=True)
 
 # Inputs for prediction
 st.header("Input your values here:")
+
 District = st.selectbox("District", ['Halle-Vilvoorde', 'Dinant', 'Huy', 'Aalst', 'Brugge', 'Eeklo', 'Mons',
                                       'Oostend', 'Ath', 'Sint-Niklaas', 'Waremme', 'Hasselt', 'Gent', 'Tournai',
                                       'Virton', 'Liège', 'Mouscron', 'Philippeville', 'Tielt', 'Nivelles', 'Bastogne',
@@ -37,7 +38,10 @@ ConstructionYear = st.selectbox("Construction Year", [1900.0, 1901.0, 1902.0, 19
                                                          2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0,
                                                          2020.0, 2021.0, 2022.0, 2023.0, 2024.0, 2025.0, 2026.0, 2027.0,
                                                          2033.0])
-FloodingZone = st.number_input("Flooding Zone", 1)
+
+FloodingZone = st.selectbox("Flooding Zone", ['CIRCUMSCRIBED_WATERSIDE_ZONE', 'False', 'RECOGNIZED_N_CIRCUMSCRIBED_WATERSIDE_FLOOD_ZONE',
+                                                 'POSSIBLE_FLOOD_ZONE', 'NON_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE', 'CIRCUMSCRIBED_FLOOD_ZONE',
+                                                 'RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', 'RECOGNIZED_FLOOD_ZONE'])
 Kitchen = st.number_input("Kitchen", 1)
 Locality = st.text_input("Locality", "Some Locality")
 PEB = st.text_input("PEB", "A")
