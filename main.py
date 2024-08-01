@@ -78,6 +78,7 @@ def evaluate():
     return {"results": results}
 
 
+# This method helps an user to download test data directly from web app
 @app.get("/download_test_data")
 def download_test_data():
     # Reading the cleaned data and splitting into train and test sets
