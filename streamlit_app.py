@@ -9,7 +9,7 @@ predict_image = Image.open("predict.jpg")
 
 st.title("Real Estate Price Predictor (Belgium)")
 st.markdown('The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and '
-            'tested on the remaining 20%')
+            'tested on the remaining 20%.')
 
 st.image(header_image, use_column_width=True)
 
