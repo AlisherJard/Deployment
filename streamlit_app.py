@@ -111,7 +111,7 @@ response = requests.get(url)
 if response.status_code == 200:
     # Create a download button in Streamlit
     st.download_button(
-        label="Download X_test.csv",
+        label="Download Test Data dataset.csv",
         data=response.content,
         file_name="X_test.csv",
         mime="text/csv"
