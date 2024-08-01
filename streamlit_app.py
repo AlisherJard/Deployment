@@ -2,12 +2,12 @@ import streamlit as st
 import requests
 from PIL import Image
 
-# Load images
+
 header_image = Image.open("header.jpg")
 predict_image = Image.open("predict.jpg")
 
 
-st.title("Real Estate Price Predictor (Belgium) ")
+st.title("Real Estate Price Predictor (Belgium)")
 
 st.image(header_image, use_column_width=True)
 
