@@ -42,7 +42,10 @@ ConstructionYear = st.selectbox("Construction Year", [1900.0, 1901.0, 1902.0, 19
 FloodingZone = st.selectbox("Flooding Zone", ['CIRCUMSCRIBED_WATERSIDE_ZONE', 'False', 'RECOGNIZED_N_CIRCUMSCRIBED_WATERSIDE_FLOOD_ZONE',
                                                  'POSSIBLE_FLOOD_ZONE', 'NON_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE', 'CIRCUMSCRIBED_FLOOD_ZONE',
                                                  'RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', 'RECOGNIZED_FLOOD_ZONE'])
-Kitchen = st.number_input("Kitchen", 1)
+
+Kitchen = st.selectbox("Kitchen", ['USA_SEMI_EQUIPPED', 'USA_HYPER_EQUIPPED', 'HYPER_EQUIPPED', 'INSTALLED', 'USA_UNINSTALLED',
+                                      'SEMI_EQUIPPED', 'NOT_INSTALLED', 'USA_INSTALLED', 'False'])
+
 Locality = st.text_input("Locality", "Some Locality")
 PEB = st.text_input("PEB", "A")
 Province = st.text_input("Province", "Some Province")
