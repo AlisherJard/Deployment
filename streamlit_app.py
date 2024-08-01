@@ -38,7 +38,7 @@ ShowerCount = st.number_input("Shower Count", 2)
 SurfaceOfPlot = st.number_input("Surface Of Plot", 200.0)
 SwimmingPool = st.number_input("Swimming Pool", 0)
 Terrace = st.number_input("Terrace", 1)
-ToiletCount = st.number_input("Toilet Count", 2)
+ToiletCount = st.number_input("Toilet Count", min_value=0, max_value=6)
 TypeOfProperty = st.selectbox("Type Of Property", ['Apartment', 'House'])
 
 # Button to submit the form
