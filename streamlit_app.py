@@ -14,6 +14,7 @@ st.image(header_image, use_column_width=True)
 # Inputs for prediction
 st.header("Input your values here:")
 
+Region = st.text_input("Region", "Some Region")
 District = st.selectbox("District", ['Halle-Vilvoorde', 'Dinant', 'Huy', 'Aalst', 'Brugge', 'Eeklo', 'Mons',
                                       'Oostend', 'Ath', 'Sint-Niklaas', 'Waremme', 'Hasselt', 'Gent', 'Tournai',
                                       'Virton', 'Liège', 'Mouscron', 'Philippeville', 'Tielt', 'Nivelles', 'Bastogne',
@@ -49,7 +50,6 @@ Kitchen = st.selectbox("Kitchen", ['USA_SEMI_EQUIPPED', 'USA_HYPER_EQUIPPED', 'H
 Locality = st.text_input("Locality", "Some Locality")
 PEB = st.text_input("PEB", "A")
 Province = st.text_input("Province", "Some Province")
-Region = st.text_input("Region", "Some Region")
 StateOfBuilding = st.text_input("State Of Building", "New")
 SubtypeOfProperty = st.text_input("Subtype Of Property", "House")
 TypeOfSale = st.text_input("Type Of Sale", "Private")
