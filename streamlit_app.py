@@ -8,6 +8,9 @@ predict_image = Image.open("predict.jpg")
 
 
 st.title("Real Estate Price Predictor (Belgium)")
+st.markdown('Toy model to play to classify iris flowers into \
+     (setosa, versicolor, virginica) based on their sepal/petal \
+    and length/width.')
 
 st.image(header_image, use_column_width=True)
 
