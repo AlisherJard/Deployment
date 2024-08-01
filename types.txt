@@ -1,0 +1,71 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 9715 entries, 0 to 9714
+Data columns (total 27 columns):
+ #   Column             Non-Null Count  Dtype
+---  ------             --------------  -----
+ 0   BathroomCount      9715 non-null   float64
+ 1   BedroomCount       9715 non-null   int64
+ 2   ConstructionYear   9715 non-null   float64
+ 3   District           9715 non-null   object
+ 4   Fireplace          9715 non-null   float64
+ 5   FloodingZone       9715 non-null   object
+ 6   Furnished          9715 non-null   float64
+ 7   Garden             9715 non-null   float64
+ 8   GardenArea         9715 non-null   float64
+ 9   Kitchen            9715 non-null   object
+ 10  LivingArea         9715 non-null   float64
+ 11  Locality           9715 non-null   object
+ 12  NumberOfFacades    9715 non-null   float64
+ 13  PEB                9715 non-null   object
+ 14  PostalCode         9715 non-null   int64
+ 15  Province           9715 non-null   object
+ 16  Region             9715 non-null   object
+ 17  RoomCount          9715 non-null   float64
+ 18  ShowerCount        9715 non-null   float64
+ 19  StateOfBuilding    9715 non-null   object
+ 20  SubtypeOfProperty  9715 non-null   object
+ 21  SurfaceOfPlot      9715 non-null   float64
+ 22  SwimmingPool       9715 non-null   float64
+ 23  Terrace            9715 non-null   float64
+ 24  ToiletCount        9715 non-null   float64
+ 25  TypeOfProperty     9715 non-null   int64
+ 26  TypeOfSale         9715 non-null   object
+dtypes: float64(14), int64(3), object(10)
+memory usage: 2.0+ MB
+<class 'pandas.core.frame.DataFrame'>
+
+
+
+RangeIndex: 9715 entries, 0 to 9714
+Data columns (total 27 columns):
+ #   Column             Non-Null Count  Dtype
+---  ------             --------------  -----
+ 0   BathroomCount      9715 non-null   float64
+ 1   BedroomCount       9715 non-null   int64
+ 2   ConstructionYear   9715 non-null   float64
+ 3   District           9715 non-null   object
+ 4   Fireplace          9715 non-null   float64
+ 5   FloodingZone       9715 non-null   object
+ 6   Furnished          9715 non-null   float64
+ 7   Garden             9715 non-null   float64
+ 8   GardenArea         9715 non-null   float64
+ 9   Kitchen            9715 non-null   object
+ 10  LivingArea         9715 non-null   float64
+ 11  Locality           9715 non-null   object
+ 12  NumberOfFacades    9715 non-null   float64
+ 13  PEB                9715 non-null   object
+ 14  PostalCode         9715 non-null   int64
+ 15  Province           9715 non-null   object
+ 16  Region             9715 non-null   object
+ 17  RoomCount          9715 non-null   float64
+ 18  ShowerCount        9715 non-null   float64
+ 19  StateOfBuilding    9715 non-null   object
+ 20  SubtypeOfProperty  9715 non-null   object
+ 21  SurfaceOfPlot      9715 non-null   float64
+ 22  SwimmingPool       9715 non-null   float64
+ 23  Terrace            9715 non-null   float64
+ 24  ToiletCount        9715 non-null   float64
+ 25  TypeOfProperty     9715 non-null   int64
+ 26  TypeOfSale         9715 non-null   object
+dtypes: float64(14), int64(3), object(10)
+memory usage: 2.0+ MB

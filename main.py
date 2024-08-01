@@ -15,8 +15,8 @@ app = FastAPI()
 class Features(BaseModel):
     District: str
     ConstructionYear: float
-    FloodingZone: int
-    Kitchen: int
+    FloodingZone: str
+    Kitchen: str
     Locality: str
     PEB: str
     Province: str
@@ -24,11 +24,11 @@ class Features(BaseModel):
     StateOfBuilding: str
     SubtypeOfProperty: str
     TypeOfSale: str
-    BathroomCount: int
+    BathroomCount: float
     BedroomCount: int
-    Fireplace: int
-    Furnished: int
-    Garden: int
+    Fireplace: float
+    Furnished: float
+    Garden: float
     GardenArea: float
     LivingArea: float
     NumberOfFacades: int
@@ -36,10 +36,10 @@ class Features(BaseModel):
     RoomCount: int
     ShowerCount: int
     SurfaceOfPlot: float
-    SwimmingPool: int
-    Terrace: int
-    ToiletCount: int
-    TypeOfProperty: str
+    SwimmingPool: float
+    Terrace: float
+    ToiletCount: float
+    TypeOfProperty: int
 
 
 @app.post("/predict")
