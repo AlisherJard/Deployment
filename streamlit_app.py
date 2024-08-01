@@ -3,8 +3,8 @@ import requests
 from PIL import Image
 
 # Load images
-header_image = Image.open("ezgif-3-63d9b88cbf.jpg")  # Replace with your own image path
-predict_image = Image.open("360_F_332243559_TxD3apokkJJqdtXBmLIwvyXTL8hb1xQL.jpg")
+header_image = Image.open("header.jpg")
+predict_image = Image.open("predict.jpg")
 
 
 st.title("Real Estate Price Predictor (Belgium) ")
