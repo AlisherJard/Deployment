@@ -64,7 +64,7 @@ SubtypeOfProperty = st.selectbox("Subtype Of Property", ['apartment_block', 'cou
                                                           'mixed_use_building', 'bungalow', 'manor_house', 'loft', 'villa',
                                                           'town_house', 'chalet', 'house', 'exceptional_property'])
 
-TypeOfSale = st.text_input("Type Of Sale", ['annuity_lump_sum', 'annuity_monthly_amount', 'residential_monthly_rent', 'residential_sale'])
+TypeOfSale = st.selectbox("Type Of Sale", ['annuity_lump_sum', 'annuity_monthly_amount', 'residential_monthly_rent', 'residential_sale'])
 
 BathroomCount = st.number_input("Bathroom Count", min_value=0, max_value=4)
 
