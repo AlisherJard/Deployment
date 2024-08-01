@@ -37,30 +37,67 @@ ConstructionYear = st.selectbox("Construction Year", [1900.0, 1901.0, 1902.0, 19
                                                          2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0,
                                                          2020.0, 2021.0, 2022.0, 2023.0, 2024.0, 2025.0, 2026.0, 2027.0,
                                                          2033.0])
-FloodingZone = st.number_input("Flooding Zone", "Some Locality")
-Kitchen = st.number_input("Kitchen", "Some Locality")
-Locality = st.text_input("Locality", "Some Locality")
-PEB = st.text_input("PEB", "A")
-Province = st.text_input("Province", "Some Province")
-Region = st.text_input("Region", "Some Region")
-StateOfBuilding = st.text_input("State Of Building", "New")
-SubtypeOfProperty = st.text_input("Subtype Of Property", "House")
-TypeOfSale = st.text_input("Type Of Sale", "Private")
+
+FloodingZone = st.selectbox("Flooding Zone", ['False', 'POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', 'RECOGNIZED_FLOOD_ZONE', 'RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE',
+                                                 'CIRCUMSCRIBED_WATERSIDE_ZONE', 'POSSIBLE_FLOOD_ZONE', 'NON_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE',
+                                                 'RECOGNIZED_N_CIRCUMSCRIBED_WATERSIDE_FLOOD_ZONE', 'CIRCUMSCRIBED_FLOOD_ZONE'])
+
+Kitchen = st.selectbox("Kitchen", ['USA_HYPER_EQUIPPED', 'INSTALLED', 'USA_SEMI_EQUIPPED', 'USA_UNINSTALLED', 'HYPER_EQUIPPED',
+                                      'False', 'USA_INSTALLED', 'SEMI_EQUIPPED', 'NOT_INSTALLED'])
+
+Locality = st.text_input("Locality", "Enter")
+
+PEB = st.selectbox("PEB", ['C', 'E', 'A_A+', 'A', 'A++', 'G', 'B', 'F', 'B_A', 'D', 'A+', 'False'])
+
+
+Province = st.selectbox("Province", ['West Flanders', 'Flemish Brabant', 'Luxembourg', 'Walloon Brabant', 'Brussels',
+                                      'Antwerp', 'Hainaut', 'Namur', 'Liège', 'Limburg', 'East Flanders'])
+
+Region = st.selectbox("Region", ['Brussels', 'Wallonie', 'Flanders'])
+
+StateOfBuilding = st.selectbox("State Of Building", ['TO_RENOVATE', 'JUST_RENOVATED', 'False', 'TO_BE_DONE_UP',
+                                                      'TO_RESTORE', 'GOOD', 'AS_NEW'])
+
+SubtypeOfProperty = st.selectbox("Subtype Of Property", ['apartment_block', 'country_cottage', 'mansion', 'penthouse',
+                                                          'farmhouse', 'other_property', 'kot', 'pavilion', 'triplex',
+                                                          'service_flat', 'flat_studio', 'apartment', 'ground_floor', 'duplex',
+                                                          'mixed_use_building', 'bungalow', 'manor_house', 'loft', 'villa',
+                                                          'town_house', 'chalet', 'house', 'exceptional_property'])
+
+TypeOfSale = st.text_input("Type Of Sale", ['annuity_lump_sum', 'annuity_monthly_amount', 'residential_monthly_rent', 'residential_sale'])
+
 BathroomCount = st.number_input("Bathroom Count", min_value=0, max_value=4)
-BedroomCount = st.number_input("Bedroom Count", 3)
-Fireplace = st.number_input("Fireplace", 1)
-Furnished = st.number_input("Furnished", 0)
+
+BedroomCount = st.number_input("Bedroom Count", min_value=0, max_value=8)
+
+
+# The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and
+# tested on the remaining 20%. A value of 0.0 in the “Furnished” and “Fireplace” columns indicates that the house
+# or apartment does not have these features.
+
+
 Garden = st.number_input("Garden", 1)
+
 GardenArea = st.number_input("Garden Area", 100.0)
+
 LivingArea = st.number_input("Living Area", 150.0)
+
 NumberOfFacades = st.number_input("Number Of Facades", 4)
+
 PostalCode = st.number_input("Postal Code", 8000)
+
 RoomCount = st.number_input("Room Count", 6)
+
 ShowerCount = st.number_input("Shower Count", 2)
+
 SurfaceOfPlot = st.number_input("Surface Of Plot", 200.0)
+
 SwimmingPool = st.number_input("Swimming Pool", 0)
+
 Terrace = st.number_input("Terrace", 1)
+
 ToiletCount = st.number_input("Toilet Count", min_value=0, max_value=6)
+
 TypeOfProperty = st.selectbox("Type Of Property (1 = House),(2 = Apartment)", [1, 2])
 
 # Button to submit the form
@@ -81,8 +118,8 @@ if st.button("Predict Price"):
         "TypeOfSale": TypeOfSale,
         "BathroomCount": BathroomCount,
         "BedroomCount": BedroomCount,
-        "Fireplace": Fireplace,
-        "Furnished": Furnished,
+        "Fireplace": 0.0,
+        "Furnished": 0.0,
         "Garden": Garden,
         "GardenArea": GardenArea,
         "LivingArea": LivingArea,
