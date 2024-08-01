@@ -60,23 +60,23 @@ BedroomCount = st.number_input("Bedroom Count", min_value=0, max_value=8)
 # The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and
 # tested on the remaining 20%.
 
-Garden = st.selectbox("Garden", [0.0, 1.0])
+Garden = st.selectbox("Garden (1.0 = There is one),(0.0 = Absent)", [0, 1])
 
-GardenArea = st.number_input("Garden Area", min_value=0, max_value=92828)
+GardenArea = st.number_input("Garden Area (m²)", min_value=0, max_value=92828)
 
 LivingArea = st.number_input("Living Area (m²)", min_value=12, max_value=1000)
 
-NumberOfFacades = st.selectbox("Number Of Facades", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
+NumberOfFacades = st.selectbox("Number Of Facades", [0, 1, 2, 3, 4, 5, 6])
 
 PostalCode = st.selectbox("Postal Code", [int(code) for code in range(0000, 9999)])
 
-RoomCount = st.selectbox("Room Count", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0])
+RoomCount = st.selectbox("Room Count", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
 ShowerCount = st.selectbox("Shower Count", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 14.0])
 
-SurfaceOfPlot = st.number_input("Surface Of Plot", min_value=0.0, max_value=4000.0)
+SurfaceOfPlot = st.number_input("Surface Of Plot (m²)", min_value=0, max_value=4000)
 
-Terrace = st.selectbox("Terrace (1.0 = There is one),(0.0 = No terrace)", [0.0, 1.0])
+Terrace = st.selectbox("Terrace (1.0 = There is one),(0.0 = Absent)", [0, 1])
 
 ToiletCount = st.number_input("Toilet Count", min_value=0, max_value=6)
 
