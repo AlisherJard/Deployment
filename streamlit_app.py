@@ -13,7 +13,12 @@ st.image(header_image, use_column_width=True)
 
 # Inputs for prediction
 st.header("Input your values here:")
-District = st.text_input("District", "Brugge")
+District = st.text_input("District", ['Halle-Vilvoorde', 'Dinant', 'Huy', 'Aalst', 'Brugge', 'Eeklo', 'Mons',
+                                      'Oostend', 'Ath', 'Sint-Niklaas', 'Waremme', 'Hasselt', 'Gent', 'Tournai',
+                                      'Virton', 'Liège', 'Mouscron', 'Philippeville', 'Tielt', 'Nivelles', 'Bastogne',
+                                      'Maaseik', 'Namur', 'Leuven', 'Turnhout', 'Charleroi', 'Marche-en-Famenne', 'Thuin',
+                                      'Soignies', 'Mechelen', 'Brussels', 'Diksmuide', 'Veurne', 'Verviers', 'Antwerp',
+                                      'Tongeren',  'Dendermonde', 'Arlon', 'Neufchâteau', 'Ieper', 'Kortrijk', 'Oudenaarde', 'Roeselare'])
 ConstructionYear = st.number_input("Construction Year", 2026)
 FloodingZone = st.number_input("Flooding Zone", 1)
 Kitchen = st.number_input("Kitchen", 1)
