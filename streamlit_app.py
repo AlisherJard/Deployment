@@ -72,11 +72,9 @@ RoomCount = st.selectbox("Room Count", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 
 
 ShowerCount = st.selectbox("Shower Count", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 14.0])
 
-SurfaceOfPlot = st.number_input("Surface Of Plot", 200.0)
+SurfaceOfPlot = st.number_input("Surface Of Plot", min_value=0.0, max_value=4000.0)
 
-SwimmingPool = st.number_input("Swimming Pool", 0)
-
-Terrace = st.number_input("Terrace", 1)
+Terrace = st.selectbox("Terrace", [0.0, 1.0])
 
 ToiletCount = st.number_input("Toilet Count", min_value=0, max_value=6)
 
@@ -110,7 +108,7 @@ if st.button("Predict Price"):
         "RoomCount": RoomCount,
         "ShowerCount": ShowerCount,
         "SurfaceOfPlot": SurfaceOfPlot,
-        "SwimmingPool": SwimmingPool,
+        "SwimmingPool": 0.0,
         "Terrace": Terrace,
         "ToiletCount": ToiletCount,
         "TypeOfProperty": TypeOfProperty
