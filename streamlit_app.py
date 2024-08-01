@@ -102,6 +102,8 @@ st.title("Download Test Data")
 
 st.write("Click the button below to download the test data as a CSV file.")
 
+st.balloon()
+
 # Fetch the data from the FastAPI endpoint
 response = requests.get(url)
 
