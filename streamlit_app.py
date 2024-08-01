@@ -43,6 +43,7 @@ TypeOfProperty = st.selectbox("Type Of Property", ['1', '2'])
 
 # Button to submit the form
 if st.button("Predict Price"):
+    st.balloons()
     # Create a dictionary with the input features
     input_features = {
         "District": District,
@@ -102,7 +103,6 @@ st.title("Download Test Data")
 
 st.write("Click the button below to download the test data as a CSV file.")
 
-st.balloons()
 
 # Fetch the data from the FastAPI endpoint
 response = requests.get(url)
