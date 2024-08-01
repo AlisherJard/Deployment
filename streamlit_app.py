@@ -70,7 +70,7 @@ PostalCode = st.selectbox("Postal Code", [int(code) for code in range(0000, 9999
 
 RoomCount = st.selectbox("Room Count", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0])
 
-ShowerCount = st.number_input("Shower Count", 2)
+ShowerCount = st.selectbox("Shower Count", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 14.0])
 
 SurfaceOfPlot = st.number_input("Surface Of Plot", 200.0)
 
