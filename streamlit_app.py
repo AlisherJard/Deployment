@@ -28,11 +28,11 @@ FloodingZone = st.selectbox("Is this area a flood zone?", ['False', 'POSSIBLE_N_
                                                  'CIRCUMSCRIBED_WATERSIDE_ZONE', 'POSSIBLE_FLOOD_ZONE', 'NON_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE',
                                                  'RECOGNIZED_N_CIRCUMSCRIBED_WATERSIDE_FLOOD_ZONE', 'CIRCUMSCRIBED_FLOOD_ZONE'])
 
-Kitchen = st.selectbox("What is the type of kitchen(s)?", ['USA_HYPER_EQUIPPED', 'INSTALLED', 'USA_SEMI_EQUIPPED', 'USA_UNINSTALLED', 'HYPER_EQUIPPED',
+Kitchen = st.selectbox("What type of kitchen(s) is it?", ['USA_HYPER_EQUIPPED', 'INSTALLED', 'USA_SEMI_EQUIPPED', 'USA_UNINSTALLED', 'HYPER_EQUIPPED',
                                       'False', 'USA_INSTALLED', 'SEMI_EQUIPPED', 'NOT_INSTALLED'])
 
 
-PEB = st.selectbox("What is your PEB?", ['C', 'E', 'A_A+', 'A', 'A++', 'G', 'B', 'F', 'B_A', 'D', 'A+', 'False'])
+PEB = st.selectbox("What is your Personal Energy Budget (PEB)?", ['C', 'E', 'A_A+', 'A', 'A++', 'G', 'B', 'F', 'B_A', 'D', 'A+', 'False'])
 
 
 Province = st.selectbox("Which province is this?", ['West Flanders', 'Flemish Brabant', 'Luxembourg', 'Walloon Brabant', 'Brussels',
@@ -40,26 +40,26 @@ Province = st.selectbox("Which province is this?", ['West Flanders', 'Flemish Br
 
 Region = st.selectbox("Which region is this?", ['Brussels', 'Wallonie', 'Flanders'])
 
-StateOfBuilding = st.selectbox("What is the State Of Building?", ['TO_RENOVATE', 'JUST_RENOVATED', 'False', 'TO_BE_DONE_UP',
+StateOfBuilding = st.selectbox("What is the condition of the building?", ['TO_RENOVATE', 'JUST_RENOVATED', 'False', 'TO_BE_DONE_UP',
                                                       'TO_RESTORE', 'GOOD', 'AS_NEW'])
 
-SubtypeOfProperty = st.selectbox("What is the Subtype Of Property?", ['apartment_block', 'country_cottage', 'mansion', 'penthouse',
+SubtypeOfProperty = st.selectbox("What is the property subtype?", ['apartment_block', 'country_cottage', 'mansion', 'penthouse',
                                                           'farmhouse', 'other_property', 'kot', 'pavilion', 'triplex',
                                                           'service_flat', 'flat_studio', 'apartment', 'ground_floor', 'duplex',
                                                           'mixed_use_building', 'bungalow', 'manor_house', 'loft', 'villa',
                                                           'town_house', 'chalet', 'house', 'exceptional_property'])
 
-TypeOfSale = st.selectbox("Whats is the Type Of Sale?", ['annuity_lump_sum', 'annuity_monthly_amount', 'residential_monthly_rent', 'residential_sale'])
+TypeOfSale = st.selectbox("What is the type of sale?", ['annuity_lump_sum', 'annuity_monthly_amount', 'residential_monthly_rent', 'residential_sale'])
 
-BathroomCount = st.number_input("How many bathrooms?", min_value=0, max_value=4)
+BathroomCount = st.number_input("How many bathrooms are there?", min_value=0, max_value=4)
 
-BedroomCount = st.number_input("How many bedrooms?", min_value=0, max_value=8)
+BedroomCount = st.number_input("How many bedrooms are there?", min_value=0, max_value=8)
 
 
 # The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and
 # tested on the remaining 20%.
 
-Garden = st.selectbox("Do you have a garden?", [False, True])
+Garden = st.selectbox("Is there a garden?", [False, True])
 
 GardenArea = st.number_input("What is your garden area (m²)?", min_value=0, max_value=92828)
 
