@@ -22,7 +22,7 @@ District = st.selectbox("Which district is this?", ['Halle-Vilvoorde', 'Dinant',
                                       'Soignies', 'Mechelen', 'Brussels', 'Diksmuide', 'Veurne', 'Verviers', 'Antwerp',
                                       'Tongeren',  'Dendermonde', 'Arlon', 'Neufchâteau', 'Ieper', 'Kortrijk', 'Oudenaarde', 'Roeselare'])
 
-ConstructionYear = st.selectbox("What year it was constructed or will be?", [int(year) for year in range(1900, 2034)])
+ConstructionYear = st.selectbox("In what year was it constructed, or when is it expected to be completed?", [int(year) for year in range(1900, 2034)])
 
 FloodingZone = st.selectbox("What is the flooding zone?", ['False', 'POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', 'RECOGNIZED_FLOOD_ZONE', 'RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE',
                                                  'CIRCUMSCRIBED_WATERSIDE_ZONE', 'POSSIBLE_FLOOD_ZONE', 'NON_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE',
