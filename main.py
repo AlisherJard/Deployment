@@ -17,7 +17,6 @@ class Features(BaseModel):
     ConstructionYear: float
     FloodingZone: str
     Kitchen: str
-    Locality: str
     PEB: str
     Province: str
     Region: str
@@ -26,8 +25,6 @@ class Features(BaseModel):
     TypeOfSale: str
     BathroomCount: float
     BedroomCount: int
-    Fireplace: float
-    Furnished: float
     Garden: float
     GardenArea: float
     LivingArea: float
@@ -36,10 +33,10 @@ class Features(BaseModel):
     RoomCount: int
     ShowerCount: int
     SurfaceOfPlot: float
-    SwimmingPool: float
     Terrace: float
     ToiletCount: float
     TypeOfProperty: int
+
 
 
 @app.post("/predict")
