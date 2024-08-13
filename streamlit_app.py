@@ -61,7 +61,7 @@ BedroomCount = st.number_input("How many bedrooms are there?", min_value=0, max_
 
 Garden = st.selectbox("Is there a garden?", [False, True])
 
-GardenArea = st.number_input("What is your garden area (m²)?", min_value=0, max_value=92828)
+GardenArea = st.number_input("What is the size of a garden in square meters (m²)?", min_value=0, max_value=92828)
 
 LivingArea = st.number_input("What is your living area (m²)?", min_value=12, max_value=1000)
 
