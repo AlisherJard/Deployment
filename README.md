@@ -9,7 +9,7 @@ The model is deployed on Streamlit, while the FastAPI is deployed on Render. The
 and the Streamlit frontend is accomplished using the requests library. 
 
 This web application is designed to predict the price of a house based on user-provided inputs. 
-The link to the deployed project is provided in the description.
+The link to the deployed project is provided in the description or [here](https://alisherjard-deployment-streamlit-app-jpegcx.streamlit.app).
 
 
 
