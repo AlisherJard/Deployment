@@ -59,27 +59,27 @@ BedroomCount = st.number_input("Bedroom Count", min_value=0, max_value=8)
 # The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and
 # tested on the remaining 20%.
 
-Garden = st.selectbox("Garden (1.0 = There is one),(0.0 = Absent)", [0, 1])
+Garden = st.selectbox("Do you have a garden?", [0, 1])
 
 GardenArea = st.number_input("Garden Area (m²)", min_value=0, max_value=92828)
 
 LivingArea = st.number_input("Living Area (m²)", min_value=12, max_value=1000)
 
-NumberOfFacades = st.selectbox("Number Of Facades", [0, 1, 2, 3, 4, 5, 6])
+NumberOfFacades = st.selectbox("How many facades?", [0, 1, 2, 3, 4, 5, 6])
 
 PostalCode = st.selectbox("Postal Code", [int(code) for code in range(1000, 9992)])
 
-RoomCount = st.selectbox("Room Count", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+RoomCount = st.selectbox("How many rooms?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
-ShowerCount = st.selectbox("Shower Count", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14])
+ShowerCount = st.selectbox("How many showers?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14])
 
 SurfaceOfPlot = st.number_input("Surface Of Plot (m²)", min_value=0, max_value=4000)
 
-Terrace = st.selectbox("Terrace (1.0 = There is one),(0.0 = Absent)", [0, 1])
+Terrace = st.selectbox("Is there a terrace?", [0, 1])
 
-ToiletCount = st.number_input("Toilet Count", min_value=0, max_value=6)
+ToiletCount = st.number_input("How many toilets?", min_value=0, max_value=6)
 
-TypeOfProperty = st.selectbox("Type Of Property: Is it 1) House, 2) Apartment ?", [1, 2])
+TypeOfProperty = st.selectbox("Is it 1) House, 2) Apartment ?", [1, 2])
 
 # Button to submit the form
 if st.button("Predict Price"):
