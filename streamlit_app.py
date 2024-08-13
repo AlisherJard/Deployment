@@ -59,7 +59,7 @@ BedroomCount = st.number_input("Bedroom Count", min_value=0, max_value=8)
 # The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and
 # tested on the remaining 20%.
 
-Garden = st.selectbox("Do you have a garden?", [0, 1])
+Garden = st.selectbox("Do you have a garden?", [False, True])
 
 GardenArea = st.number_input("Garden Area (m²)", min_value=0, max_value=92828)
 
