@@ -75,7 +75,7 @@ ShowerCount = st.selectbox("How many showers?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1
 
 SurfaceOfPlot = st.number_input("Surface Of Plot (m²)", min_value=0, max_value=4000)
 
-Terrace = st.selectbox("Is there a terrace?", [0, 1])
+Terrace = st.selectbox("Is there a terrace?", [False, True])
 
 ToiletCount = st.number_input("How many toilets?", min_value=0, max_value=6)
 
