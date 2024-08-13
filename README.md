@@ -35,11 +35,15 @@ The link to the deployed project is provided in the description.
 
 ## 🛠️ Project Structure
 
-	•	model_rf.pkl/ - This directory contains the serialized Random Forest model.
-	•	main.py/ - Contains the FastAPI application files.
-	•	streamlit_app/ - Contains the Streamlit frontend application files.
+	•	model_rf.pkl - This directory contains the serialized Random Forest model.
+	•	main.py - Contains the FastAPI application files.
+	•	streamlit_app - Contains the Streamlit frontend application files.
 	•	requirements.txt - A list of all the dependencies required to run the project.
 	•	dockerfile - A list of commands for Render's deployment.
+	•	model_test.py - The R2 and Mean Absolute Error (MAS) results for the model_rf.pkl
+	•	cleaned_data.csv - Complete dataset (X_train + X_test + target)
+	•	X_test.csv - 20% of training data of cleaned_data.csv 
+
 
 
 ## 👥 Contributors
