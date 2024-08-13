@@ -63,23 +63,23 @@ Garden = st.selectbox("Is there a garden?", [False, True])
 
 GardenArea = st.number_input("What is the size of a garden in square meters (m²)?", min_value=0, max_value=92828)
 
-LivingArea = st.number_input("What is your living area (m²)?", min_value=12, max_value=1000)
+LivingArea = st.number_input("What is the size of a living area in square meters (m²)?", min_value=12, max_value=1000)
 
-NumberOfFacades = st.selectbox("How many facades?", [0, 1, 2, 3, 4, 5, 6])
+NumberOfFacades = st.selectbox("How many facades does the building have?", [0, 1, 2, 3, 4, 5, 6])
 
-PostalCode = st.selectbox("What is your postal code?", [int(code) for code in range(1000, 9992)])
+PostalCode = st.selectbox("What is the postal code?", [int(code) for code in range(1000, 9992)])
 
-RoomCount = st.selectbox("How many rooms?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+RoomCount = st.selectbox("How many rooms are there?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
-ShowerCount = st.selectbox("How many showers?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14])
+ShowerCount = st.selectbox("How many showers are there?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14])
 
-SurfaceOfPlot = st.number_input("What is your surface of plot (m²)?", min_value=0, max_value=4000)
+SurfaceOfPlot = st.number_input("What is the size of a surface of plot in square meters (m²)?", min_value=0, max_value=4000)
 
-Terrace = st.selectbox("Is there a terrace?", [False, True])
+Terrace = st.selectbox("Does it have a terrace?", [False, True])
 
-ToiletCount = st.number_input("How many toilets?", min_value=0, max_value=6)
+ToiletCount = st.number_input("How many toilets are there?", min_value=0, max_value=6)
 
-TypeOfProperty = st.selectbox("Is it 1) House, 2) Apartment ?", [1, 2])
+TypeOfProperty = st.selectbox("Is it a 1) House or 2) Apartment?", [1, 2])
 
 # Button to submit the form
 if st.button("Predict Price"):
