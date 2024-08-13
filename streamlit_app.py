@@ -31,7 +31,6 @@ FloodingZone = st.selectbox("Flooding Zone", ['False', 'POSSIBLE_N_CIRCUMSCRIBED
 Kitchen = st.selectbox("Kitchen", ['USA_HYPER_EQUIPPED', 'INSTALLED', 'USA_SEMI_EQUIPPED', 'USA_UNINSTALLED', 'HYPER_EQUIPPED',
                                       'False', 'USA_INSTALLED', 'SEMI_EQUIPPED', 'NOT_INSTALLED'])
 
-Locality = st.text_input("Locality", "Enter")
 
 PEB = st.selectbox("PEB", ['C', 'E', 'A_A+', 'A', 'A++', 'G', 'B', 'F', 'B_A', 'D', 'A+', 'False'])
 
@@ -91,7 +90,6 @@ if st.button("Predict Price"):
         "ConstructionYear": ConstructionYear,
         "FloodingZone": FloodingZone,
         "Kitchen": Kitchen,
-        "Locality": Locality,
         "PEB": PEB,
         "Province": Province,
         "Region": Region,
@@ -100,8 +98,6 @@ if st.button("Predict Price"):
         "TypeOfSale": TypeOfSale,
         "BathroomCount": BathroomCount,
         "BedroomCount": BedroomCount,
-        "Fireplace": 0.0,
-        "Furnished": 0.0,
         "Garden": Garden,
         "GardenArea": GardenArea,
         "LivingArea": LivingArea,
@@ -110,7 +106,6 @@ if st.button("Predict Price"):
         "RoomCount": RoomCount,
         "ShowerCount": ShowerCount,
         "SurfaceOfPlot": SurfaceOfPlot,
-        "SwimmingPool": 0.0,
         "Terrace": Terrace,
         "ToiletCount": ToiletCount,
         "TypeOfProperty": TypeOfProperty
