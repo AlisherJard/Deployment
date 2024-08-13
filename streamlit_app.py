@@ -84,7 +84,7 @@ ToiletCount = st.number_input("How many toilets are there?", min_value=0, max_va
 TypeOfProperty = st.selectbox("Select the type of property:", ["House", "Apartment"])
 
 if TypeOfProperty == "House":
-    TypeOfProperty = 1
+    TypeOfProperty = 'd'
 else:
     TypeOfProperty = 2
 
