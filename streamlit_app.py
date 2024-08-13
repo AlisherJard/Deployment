@@ -122,7 +122,7 @@ if st.button("Predict Price"):
 
 # Evaluation of the model based on 9715 properties
 
-st.header("Evaluate the Predictor based on Test Data (9715 properties):")
+st.header("Evaluate the Predictor using the test data consisting of 9715 properties:")
 if st.button("Evaluate"):
     # Sending the request to the FastAPI evaluate endpoint (connection to FastAPI back-end)
     response = requests.get("https://deployment-nlge.onrender.com/evaluate")
