@@ -11,12 +11,11 @@ features = []
 features = df_pd.drop(['Price'], axis=1)
 X_train, X_test, y_train, y_test = train_test_split(features, np.log(df_pd['Price']),test_size=0.2, random_state=0)
 
-# rfr_model = 'model.pkl'
-# joblib.dump(rfr_model, 'model_rf.pkl', compress=9)
 
+# Loading the model
 loaded_model = joblib.load('model_rf.pkl')
-#
-# # Predict and evaluate
+
+# Predicting and evaluating the model
 
 y_pred = loaded_model.predict(X_test)
 
