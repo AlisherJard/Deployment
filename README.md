@@ -20,15 +20,10 @@ The link to the deployed project is provided in the description.
 
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-
 ![PIL](https://img.shields.io/badge/PIL-5C2D91?style=for-the-badge&logo=python&logoColor=white)
-
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-
 ![Requests](https://img.shields.io/badge/requests-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 
