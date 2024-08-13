@@ -81,9 +81,9 @@ ToiletCount = st.number_input("How many toilets are there?", min_value=0, max_va
 
 # TypeOfProperty = st.selectbox("Is it a 1) House or 2) Apartment?", [1, 2])
 
-property_dict = {1: "House", 2: "Apartment"}
-TypeOfProperty = st.selectbox("Is it a 1) House or 2) Apartment?", [1, 2])
-property_type = property_dict[TypeOfProperty]
+TypeOfProperty = st.selectbox("Select the type of property:", ["House", "Apartment"])
+
+TypeOfProperty = 1 if TypeOfProperty == "House" else 2
 
 # Button to submit the form
 if st.button("Predict Price"):
