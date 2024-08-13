@@ -79,7 +79,9 @@ Terrace = st.selectbox("Does it have a terrace?", [False, True])
 
 ToiletCount = st.number_input("How many toilets are there?", min_value=0, max_value=6)
 
-TypeOfProperty = 1 if st.selectbox("Select the type of property:", ["House", "Apartment"]) == "House" else 2
+# TypeOfProperty = 1 if st.selectbox("Select the type of property:", ["House", "Apartment"]) == "House" else 2
+
+TypeOfProperty = st.selectbox("Select the type of property:", ["House", "Apartment"])
 
 
 # Button to submit the form
