@@ -3,10 +3,13 @@
 ## 📜 Description
 
 
-This repository contains a project where I have implemented a Random Forest model, serialized it using pickle, 
+This repository contains a web application where I have implemented a Random Forest model, serialized it using pickle, 
 and compressed it using joblib. The backend of the project is powered by FAST API, and the frontend is developed with Streamlit.
 The model is deployed on Streamlit, while the FastAPI is deployed on Render. The integration between the FastAPI backend 
-and the Streamlit frontend is accomplished using the requests library. The link to the deployed project is provided in the description.
+and the Streamlit frontend is accomplished using the requests library. 
+
+This web application is designed to predict the price of a house based on user-provided inputs. 
+The link to the deployed project is provided in the description.
 
 
 
