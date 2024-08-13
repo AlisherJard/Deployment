@@ -35,10 +35,10 @@ Kitchen = st.selectbox("What is the type of kitchen(s)?", ['USA_HYPER_EQUIPPED',
 PEB = st.selectbox("What is your PEB?", ['C', 'E', 'A_A+', 'A', 'A++', 'G', 'B', 'F', 'B_A', 'D', 'A+', 'False'])
 
 
-Province = st.selectbox("What Province?", ['West Flanders', 'Flemish Brabant', 'Luxembourg', 'Walloon Brabant', 'Brussels',
+Province = st.selectbox("Which province is this?", ['West Flanders', 'Flemish Brabant', 'Luxembourg', 'Walloon Brabant', 'Brussels',
                                       'Antwerp', 'Hainaut', 'Namur', 'Liège', 'Limburg', 'East Flanders'])
 
-Region = st.selectbox("What Region?", ['Brussels', 'Wallonie', 'Flanders'])
+Region = st.selectbox("Which region is this?", ['Brussels', 'Wallonie', 'Flanders'])
 
 StateOfBuilding = st.selectbox("What is the State Of Building?", ['TO_RENOVATE', 'JUST_RENOVATED', 'False', 'TO_BE_DONE_UP',
                                                       'TO_RESTORE', 'GOOD', 'AS_NEW'])
