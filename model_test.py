@@ -11,7 +11,6 @@ features = []
 features = df_pd.drop(['Price'], axis=1)
 X_train, X_test, y_train, y_test = train_test_split(features, np.log(df_pd['Price']),test_size=0.2, random_state=0)
 
-
 # Loading the model
 loaded_model = joblib.load('model_rf.pkl')
 
