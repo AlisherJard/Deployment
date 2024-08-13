@@ -4,7 +4,7 @@
 
 
 This repository contains a web application where I have implemented a Random Forest model, serialized it using pickle, 
-and compressed it using joblib. The backend of the project is powered by FAST API, and the frontend is developed with Streamlit.
+and compressed it using joblib. The backend of the project is powered by FastAPI, and the frontend is developed with Streamlit.
 The model is deployed on Streamlit, while the FastAPI is deployed on Render. The integration between the FastAPI backend 
 and the Streamlit frontend is accomplished using the requests library. 
 
@@ -18,19 +18,19 @@ The link to the deployed project is provided in the description.
 - To run this project, you need to have Python installed on your machine.
   You also need the following Python libraries:
 
-- `numpy`
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
-- `sklearn`
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 
-- `fastapi`
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
-- `pandas`
+![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-- `PIL`
+![PIL](https://img.shields.io/badge/PIL-5C2D91?style=for-the-badge&logo=python&logoColor=white)
 
-- `streamlit`
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
-- `requests`
+![Requests](https://img.shields.io/badge/requests-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 
 ## 🛠️ Project Structure
