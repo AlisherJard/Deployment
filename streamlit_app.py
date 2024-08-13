@@ -79,7 +79,7 @@ Terrace = st.selectbox("Terrace (1.0 = There is one),(0.0 = Absent)", [0, 1])
 
 ToiletCount = st.number_input("Toilet Count", min_value=0, max_value=6)
 
-TypeOfProperty = st.selectbox("Type Of Property 1) House, 2) Apartment", [1, 2])
+TypeOfProperty = st.selectbox("Type Of Property: Is it 1) House, 2) Apartment ?", [1, 2])
 
 # Button to submit the form
 if st.button("Predict Price"):
