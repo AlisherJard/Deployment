@@ -49,10 +49,10 @@ Alisher Jardemaliyev
 
 ## 📅 Timeline
 
-- `Day 1`: Data Preprocessing
+- `Day 1`: Data Preprocessing and Integration
 
-- `Day 2`: Creation of Visualization Functions
+- `Day 2`: Development of Backend Components using FAST API
 
-- `Day 3`: Model Selection and Implementation
+- `Day 3`: Implementation, and Integration with Frontend (Streamlit)
 
-- `Day 4`: Model Evaluation and Selection
+- `Day 4`: Deployment and Final Touches
