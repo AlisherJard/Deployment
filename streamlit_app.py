@@ -15,45 +15,45 @@ st.image(header_image, use_column_width=True)
 
 # Inputs for prediction
 st.header("Input your values here:")
-District = st.selectbox("District", ['Halle-Vilvoorde', 'Dinant', 'Huy', 'Aalst', 'Brugge', 'Eeklo', 'Mons',
+District = st.selectbox("What district it is?", ['Halle-Vilvoorde', 'Dinant', 'Huy', 'Aalst', 'Brugge', 'Eeklo', 'Mons',
                                       'Oostend', 'Ath', 'Sint-Niklaas', 'Waremme', 'Hasselt', 'Gent', 'Tournai',
                                       'Virton', 'Liège', 'Mouscron', 'Philippeville', 'Tielt', 'Nivelles', 'Bastogne',
                                       'Maaseik', 'Namur', 'Leuven', 'Turnhout', 'Charleroi', 'Marche-en-Famenne', 'Thuin',
                                       'Soignies', 'Mechelen', 'Brussels', 'Diksmuide', 'Veurne', 'Verviers', 'Antwerp',
                                       'Tongeren',  'Dendermonde', 'Arlon', 'Neufchâteau', 'Ieper', 'Kortrijk', 'Oudenaarde', 'Roeselare'])
 
-ConstructionYear = st.selectbox("Construction Year", [int(year) for year in range(1900, 2034)])
+ConstructionYear = st.selectbox("What year it was constructed or will be?", [int(year) for year in range(1900, 2034)])
 
-FloodingZone = st.selectbox("Flooding Zone", ['False', 'POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', 'RECOGNIZED_FLOOD_ZONE', 'RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE',
+FloodingZone = st.selectbox("What is the flooding zone?", ['False', 'POSSIBLE_N_CIRCUMSCRIBED_WATERSIDE_ZONE', 'RECOGNIZED_FLOOD_ZONE', 'RECOGNIZED_N_CIRCUMSCRIBED_FLOOD_ZONE',
                                                  'CIRCUMSCRIBED_WATERSIDE_ZONE', 'POSSIBLE_FLOOD_ZONE', 'NON_FLOOD_ZONE', 'POSSIBLE_N_CIRCUMSCRIBED_FLOOD_ZONE',
                                                  'RECOGNIZED_N_CIRCUMSCRIBED_WATERSIDE_FLOOD_ZONE', 'CIRCUMSCRIBED_FLOOD_ZONE'])
 
-Kitchen = st.selectbox("Kitchen", ['USA_HYPER_EQUIPPED', 'INSTALLED', 'USA_SEMI_EQUIPPED', 'USA_UNINSTALLED', 'HYPER_EQUIPPED',
+Kitchen = st.selectbox("What is the type of kitchen(s)?", ['USA_HYPER_EQUIPPED', 'INSTALLED', 'USA_SEMI_EQUIPPED', 'USA_UNINSTALLED', 'HYPER_EQUIPPED',
                                       'False', 'USA_INSTALLED', 'SEMI_EQUIPPED', 'NOT_INSTALLED'])
 
 
-PEB = st.selectbox("PEB", ['C', 'E', 'A_A+', 'A', 'A++', 'G', 'B', 'F', 'B_A', 'D', 'A+', 'False'])
+PEB = st.selectbox("What is your PEB?", ['C', 'E', 'A_A+', 'A', 'A++', 'G', 'B', 'F', 'B_A', 'D', 'A+', 'False'])
 
 
-Province = st.selectbox("Province", ['West Flanders', 'Flemish Brabant', 'Luxembourg', 'Walloon Brabant', 'Brussels',
+Province = st.selectbox("What Province?", ['West Flanders', 'Flemish Brabant', 'Luxembourg', 'Walloon Brabant', 'Brussels',
                                       'Antwerp', 'Hainaut', 'Namur', 'Liège', 'Limburg', 'East Flanders'])
 
-Region = st.selectbox("Region", ['Brussels', 'Wallonie', 'Flanders'])
+Region = st.selectbox("What Region?", ['Brussels', 'Wallonie', 'Flanders'])
 
-StateOfBuilding = st.selectbox("State Of Building", ['TO_RENOVATE', 'JUST_RENOVATED', 'False', 'TO_BE_DONE_UP',
+StateOfBuilding = st.selectbox("What is the State Of Building?", ['TO_RENOVATE', 'JUST_RENOVATED', 'False', 'TO_BE_DONE_UP',
                                                       'TO_RESTORE', 'GOOD', 'AS_NEW'])
 
-SubtypeOfProperty = st.selectbox("Subtype Of Property", ['apartment_block', 'country_cottage', 'mansion', 'penthouse',
+SubtypeOfProperty = st.selectbox("What is the Subtype Of Property?", ['apartment_block', 'country_cottage', 'mansion', 'penthouse',
                                                           'farmhouse', 'other_property', 'kot', 'pavilion', 'triplex',
                                                           'service_flat', 'flat_studio', 'apartment', 'ground_floor', 'duplex',
                                                           'mixed_use_building', 'bungalow', 'manor_house', 'loft', 'villa',
                                                           'town_house', 'chalet', 'house', 'exceptional_property'])
 
-TypeOfSale = st.selectbox("Type Of Sale", ['annuity_lump_sum', 'annuity_monthly_amount', 'residential_monthly_rent', 'residential_sale'])
+TypeOfSale = st.selectbox("Whats is the Type Of Sale?", ['annuity_lump_sum', 'annuity_monthly_amount', 'residential_monthly_rent', 'residential_sale'])
 
-BathroomCount = st.number_input("Bathroom Count", min_value=0, max_value=4)
+BathroomCount = st.number_input("How many bathrooms?", min_value=0, max_value=4)
 
-BedroomCount = st.number_input("Bedroom Count", min_value=0, max_value=8)
+BedroomCount = st.number_input("How many bedrooms?", min_value=0, max_value=8)
 
 
 # The overall dataset consists of 48,574 data points. The model was trained on 80% of these data points and
@@ -61,19 +61,19 @@ BedroomCount = st.number_input("Bedroom Count", min_value=0, max_value=8)
 
 Garden = st.selectbox("Do you have a garden?", [False, True])
 
-GardenArea = st.number_input("Garden Area (m²)", min_value=0, max_value=92828)
+GardenArea = st.number_input("What is your garden area (m²)?", min_value=0, max_value=92828)
 
-LivingArea = st.number_input("Living Area (m²)", min_value=12, max_value=1000)
+LivingArea = st.number_input("What is your living area (m²)?", min_value=12, max_value=1000)
 
 NumberOfFacades = st.selectbox("How many facades?", [0, 1, 2, 3, 4, 5, 6])
 
-PostalCode = st.selectbox("Postal Code", [int(code) for code in range(1000, 9992)])
+PostalCode = st.selectbox("What is your postal code?", [int(code) for code in range(1000, 9992)])
 
 RoomCount = st.selectbox("How many rooms?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
 ShowerCount = st.selectbox("How many showers?", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14])
 
-SurfaceOfPlot = st.number_input("Surface Of Plot (m²)", min_value=0, max_value=4000)
+SurfaceOfPlot = st.number_input("What is your surface of plot (m²)?", min_value=0, max_value=4000)
 
 Terrace = st.selectbox("Is there a terrace?", [False, True])
 
