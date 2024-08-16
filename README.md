@@ -38,6 +38,37 @@ The link to the deployed project is provided in the description or [here](https:
 	•	cleaned_data.csv - Complete dataset (X_train + X_test + target)
 	•	X_test.csv - 20% of training data of cleaned_data.csv 
 
+## 👐 Usage
+
+Step 1: Visit the Web Application
+
+Head over to the provided URL https://alisherjard-deployment-streamlit-app-jpegcx.streamlit.app
+
+Step 2: Input House Parameters
+
+Once you’re on the site, you will be prompted to input the parameters of the house you wish to evaluate. These parameters typically include:
+
+	•	Location: Enter the city or neighborhood.
+	•	Number of Bedrooms: Specify the number of bedrooms.
+	•	Number of Bathrooms: Specify the number of bathrooms.
+	•	Square Footage: Enter the total square footage of the house.
+	•	Year Built: Provide the year the house was constructed.
+	•	Other Features: Additional details such as the presence of a flooding zone, PEB or equipped kitchen.
+
+Step 3: Get the Prediction
+
+After entering the necessary information, submit the form. The application will process the input data and provide a prediction for the house value.
+
+Step 4: Review Predictor Performance
+
+To understand how the predictor works, you can check its performance on other datapoints:
+
+	•	Historical Data: Review how the model performed on similar properties.
+	•	Comparative Analysis: See how the prediction compares with actual market data.
+
+Step 5: Download Test Data
+
+If you want to dive deeper into the model’s performance or test it with other data, you can download the test dataset directly from the platform. This can be useful for analysis, experimentation, or further validation.
 
 
 ## 👥 Contributors
