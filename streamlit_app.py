@@ -134,7 +134,7 @@ if st.button("Evaluate"):
         st.error("An error occurred while evaluating the model.")
 
 
-url = "https://deployment-nlge.onrender.com/download_test_data"
+url = "https://deployment-1-sug7.onrender.com/download_test_data"
 
 st.title("Download Test Data")
 
