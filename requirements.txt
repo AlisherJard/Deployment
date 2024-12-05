@@ -2,6 +2,6 @@ fastapi
 uvicorn
 joblib
 pandas
-numpy==1.24.3
+numpy
 scikit-learn==1.2.2
 pydantic
