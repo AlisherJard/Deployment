@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
 from PIL import Image
+import os
+port = os.getenv('PORT', 8501)  # Default to 8501 if PORT is not set
+
 
 header_image = Image.open("header.jpg")
 predict_image = Image.open("predict.jpg")
