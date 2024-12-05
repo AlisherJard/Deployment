@@ -113,7 +113,7 @@ if st.button("Predict Price"):
     }
 
     # Sending the request to the FastAPI prediction endpoint (connection to FastAPI back-end)
-    response = requests.post("https://deployment-nlge.onrender.com/predict", json=input_features)
+    response = requests.post("https://deployment-1-sug7.onrender.com/predict", json=input_features)
     if response.status_code == 200:
         result = response.json()
         st.success(f"Based on the information you have provided, the price will be: {result['predicted_price']:.2f} euros")
@@ -126,7 +126,7 @@ if st.button("Predict Price"):
 st.header("Compare the actual prices with the predicted prices using the test data:")
 if st.button("Evaluate"):
     # Sending the request to the FastAPI evaluate endpoint (connection to FastAPI back-end)
-    response = requests.get("https://deployment-nlge.onrender.com/evaluate")
+    response = requests.get("https://deployment-1-sug7.onrender.com/evaluate")
     if response.status_code == 200:
         results = response.json()["results"]
         st.write(results)
