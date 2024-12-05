@@ -1,7 +1,13 @@
 import streamlit as st
 import requests
 from PIL import Image
+from fastapi import FastAPI
 
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Real Estate Price Predictor API!"}
 
 header_image = Image.open("header.jpg")
 predict_image = Image.open("predict.jpg")
