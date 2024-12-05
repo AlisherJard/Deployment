@@ -11,6 +11,10 @@ loaded_model = joblib.load('model_rf.pkl')
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the API! Use /predict or other endpoints to interact."}
+
 # Defining the Features class to match our dataset's structure
 class Features(BaseModel):
     District: str
