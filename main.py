@@ -11,11 +11,6 @@ loaded_model = joblib.load('model_rf.pkl')
 
 app = FastAPI()
 
-# Root endpoint
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to the Real Estate Price Predictor API!"}
-
 # Defining the Features class to match our dataset's structure
 class Features(BaseModel):
     District: str
@@ -42,6 +37,8 @@ class Features(BaseModel):
     ToiletCount: float
     TypeOfProperty: int
 
+
+
 @app.post("/predict")
 def predict(features: Features):
     # Converting the features to a DataFrame
@@ -54,6 +51,10 @@ def predict(features: Features):
     # Returning the predicted price
     predicted_price = round(np.exp(y_pred[0]), 1)
     return {"predicted_price": predicted_price}
+
+
+# This method helps you understand how well the model is performing,
+# by comparing the actual prices to the predicted prices on cleaned_data.csv (cleaned dataset).
 
 @app.get("/evaluate")
 def evaluate():
@@ -68,11 +69,13 @@ def evaluate():
     predicted_prices = np.exp(y_pred)
 
     # Creating a list of dictionaries with original and predicted prices
-    results = [{"Real Price": round(orig, 1), "Predicted Price": round(pred, 1)} for orig, pred in
+    results = [{"Real Price": round(orig,1), "Predicted Price": round(pred,1)} for orig, pred in
                zip(original_prices, predicted_prices)]
 
     return {"results": results}
 
+
+# This method helps an user to download test data directly from web app
 @app.get("/download_test_data")
 def download_test_data():
     # Reading the cleaned data and splitting into train and test sets
@@ -87,7 +90,9 @@ def download_test_data():
     # Returning the file as a response
     return FileResponse(path=test_data_filename, filename=test_data_filename, media_type='text/csv')
 
+
 if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
