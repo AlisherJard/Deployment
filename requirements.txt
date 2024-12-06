@@ -1,10 +1,6 @@
-fastapi
-uvicorn
-joblib>=1.4
-pandas>=2.0
+streamlit==1.40.2
+joblib==1.4.2
+pandas==2.2.3
 numpy>=1.25
 scikit-learn==1.2.2
-pydantic
-streamlit
-requests
-pillow
+Pillow==11.0.0
