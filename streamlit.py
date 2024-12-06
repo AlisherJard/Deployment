@@ -13,7 +13,7 @@ header_image = Image.open("header.jpg")
 predict_image = Image.open("predict.jpg")
 
 st.title("Real Estate Price Predictor (Belgium)")
-st.image(header_image, use_column_width=True)
+st.image(header_image, use_container_width=True)
 
 # Description
 st.markdown("""
@@ -114,7 +114,8 @@ if st.button("Predict Price"):
     y_pred = loaded_model.predict(df)
     predicted_price = round(np.exp(y_pred[0]), 1)
     st.success(f"The predicted price is: {predicted_price} euros")
-    st.image(predict_image, use_column_width=True)
+    st.balloons()
+    st.image(predict_image, use_container_width=True)
 
 # Evaluation
 st.header("Evaluate Model")
